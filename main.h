@@ -1,5 +1,5 @@
-#ifndef PRINT_F
-#define PRINT_F
+#ifndef MAIN_H
+#define MAIN_H
 
 #include <unistd.h>
 #include <stdarg.h>
@@ -29,4 +29,4 @@ int print_string(va_list list);
 int print_percent(__attribute__((unused))va_list list);
 
 
-#endif /* PRINT_F */
+#endif /* MAIN_H */
