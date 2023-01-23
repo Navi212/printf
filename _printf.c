@@ -15,7 +15,9 @@ int _printf(const char *format, ...)
 	create_struct_var fun_arr[] = {
 		{"c", print_char},
 		{"s", print_string},
-		{"%", print_percent}
+		{"%", print_percent},
+		{"d", print_signed_int},
+		{"i", print_signed_int}
 	};
 
 	va_list arg_list;

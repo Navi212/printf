@@ -54,3 +54,43 @@ int print_percent(__attribute__((unused))va_list list)
 	_write_char('%');
 	return (1);
 }
+
+
+/**
+ * print_signed_int - prints signed base 10 integers
+ * @num_list: variable list of passed arguments
+ *
+ * Description: prints both negavtive and positive
+ * numbers. base 10 numbers.
+ * Return: number of numbers printed
+ */
+
+int print_signed_int(va_list num_list)
+{
+	int num_len;
+
+	num_len = print_signed_num(num_list);
+	return (num_len);
+}
+
+
+/**
+ * positive_nums - prints only positive integers
+ * @list: list of all variable arguments passed
+ *
+ * Return: number of numbers passed
+ */
+int positive_nums(va_list list)
+{
+	unsigned int num;
+
+	num = va_arg(list, unsigned int);
+
+	if (num == 0)
+		return (print_positive_nums(num));
+
+	if (num < 1)
+		return (-1);
+
+	return (print_positive_nums(num));
+}

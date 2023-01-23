@@ -27,6 +27,9 @@ int _write_char(char);
 int print_char(va_list list);
 int print_string(va_list list);
 int print_percent(__attribute__((unused))va_list list);
-
+int print_signed_num(va_list list);
+int print_signed_int(va_list num_list);
+int positive_nums(va_list list);
+int print_positive_nums(unsigned int);
 
 #endif /* MAIN_H */
