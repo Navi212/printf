@@ -19,9 +19,9 @@ int parser(const char *format, create_struct_var fun_arr[], va_list arg_list)
 	{
 		if (format[i] == '%')
 		{
-			for (j = 0; fun_arr[j].symbol != NULL; j++) /* checks row 1 of fun_arr and symbol character */
+			for (j = 0; fun_arr[j].symbol != NULL; j++)
 			{
-				if (format[i + 1] == fun_arr[j].symbol[0]) /* checks next character after symbol */
+				if (format[i + 1] == fun_arr[j].symbol[0])
 				{
 					result = fun_arr[j].fun(arg_list);
 					if (result == -1)
@@ -39,20 +39,16 @@ int parser(const char *format, create_struct_var fun_arr[], va_list arg_list)
 					_write_char(format[i + 1]);
 					printed_chars += 2;
 				}
-
 				else
 					return (-1);
 			}
 			i += 1;
 		}
-
-
 		else
 		{
 			_write_char(format[i]);
 			printed_chars++;
 		}
 	}
-
 	return (printed_chars);
 }
