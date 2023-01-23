@@ -30,7 +30,7 @@ int print_string(va_list list)
 
 	str = va_arg(list, char *);
 	if (str == NULL)
-		str = "null";
+		str = "(null)";
 
 	while (str[i] != '\0')
 	{

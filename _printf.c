@@ -4,14 +4,13 @@
  * _printf - receives main string and all passed arguments
  * to print a formatted string
  * @format: contains main string enclosed in double quote
- * "main string to print"
  *
  * Return: total number of printed characters
  */
 
 int _printf(const char *format, ...)
 {
-	int printed_chars = 0;
+	int printed_chars;
 
 	create_struct_var fun_arr[] = {
 		{"c", print_char},

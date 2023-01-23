@@ -26,9 +26,7 @@ int parser(const char *format, create_struct_var fun_arr[], va_list arg_list)
 					result = fun_arr[j].fun(arg_list);
 					if (result == -1)
 						return (-1);
-
-					else
-						printed_chars += result;
+					printed_chars += result;
 					break;
 				}
 			}

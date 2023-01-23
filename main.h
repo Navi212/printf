@@ -1,6 +1,5 @@
-#ifndef PRINT_F
-#define PRINF_F
-
+#ifndef MAIN_H
+#define MAIN_H
 
 #include <unistd.h>
 #include <stdarg.h>
@@ -13,7 +12,6 @@
  * @symbol: The operator
  * @fun: Function pointer to the right function
  */
-
 struct convert
 {
 	char *symbol;
@@ -31,4 +29,4 @@ int print_string(va_list list);
 int print_percent(__attribute__((unused))va_list list);
 
 
-#endif /* PRINT_F */
+#endif /* MAIN_H */
